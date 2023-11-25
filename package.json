@@ -9,5 +9,24 @@
     "node": "^21.1.0",
     "nodemon": "^3.0.1",
     "sequelize": "^6.34.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "food-web-explorer-backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanAlexander1/food-web-explorer-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanAlexander1/food-web-explorer-backend/issues"
+  },
+  "homepage": "https://github.com/NathanAlexander1/food-web-explorer-backend#readme"
 }
