@@ -11,7 +11,8 @@
     "sequelize": "^6.34.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/seeds.js"
   },
   "name": "food-web-explorer-backend",
   "description": "",
