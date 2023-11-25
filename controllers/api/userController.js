@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
   });
   
   //get user from token
-  router.get("/getuserfromtoken", (req, res) => {
+  router.get("/token", (req, res) => {
       try {
         const token = req.headers.authorization.split(" ")[1];
         const userData = jwt.verify(token, process.env.JWT_SECRET);
