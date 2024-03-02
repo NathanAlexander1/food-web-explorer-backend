@@ -1,6 +1,6 @@
 const sequelize = require("../config/connection");
 const {
-    User
+    User, Interest
   } = require("../models");
 
   const userData = [
@@ -8,7 +8,35 @@ const {
       name: "Nigel Thornberry",
       email: "nigel@gmail.com",
       password: "mydaughtertalkstoanimals",
+    },
+    {
+      name: "Spencer Alexander",
+      email: "spencer@gmail.com",
+      password: "spenceralexander",
+    },
+    {
+      name: "Nathan Alexander",
+      email: "nathan@gmail.com",
+      password: "nathanalexander",
     }
+  ];
+
+  const interestData = [
+    {
+      organism: "Mountain Goat",
+      region: "Olympic Peninsula",
+      UserId: 1
+    },
+    {
+      organism: "Bald Eagle",
+      region: "Whidbey Island",
+      UserId: 2
+    },
+    {
+      organism: "Earthworm",
+      region: "Bellevue, WA",
+      UserId: 3
+    },
   ];
 
 const seedDatabase = async () => {
@@ -18,6 +46,8 @@ const seedDatabase = async () => {
       individualHooks: true,
       returning: true,
     });
+    
+    const interests = await Interest.bulkCreate(interestData);
   };
 
   seedDatabase();

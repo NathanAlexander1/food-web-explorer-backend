@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { User } = require("../../models");
+const { User, Interest } = require("../../models");
 
 router.get("/", async (req, res) => {
     try {
-      const users = await User.findAll();
+      const users = await User.findAll({
+        include: [Interest],
+      });
       res.status(200).json(users);
     } catch (err) {
       console.log(err);
